@@ -94,3 +94,7 @@ Main Routes have been configured and Registered with RouterModule and we have sp
 - ![Alt text](image-2.png)
 
 - ![Alt text](image-1.png)
+
+## 10 - Child Routes is Implemented for servers and users
+
+- ![Alt text](image-4.png)

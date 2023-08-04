@@ -21,6 +21,7 @@ export class ServerComponent implements OnInit {
 
     this.route.params.subscribe(
       (params: Params)=>{
+        console.log("Params",params)
         this.server=this.serversService.getServer(+params['id']);
       }
     )
