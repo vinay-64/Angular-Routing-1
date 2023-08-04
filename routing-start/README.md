@@ -53,3 +53,12 @@ Main Routes have been configured and Registered with RouterModule and we have sp
 - By default this will mark the links as active. i.e. it checks what are all links lead to the currently loaded route.
 - Therefore localhost:4200/servers/ here the loaded route has both empty and servers.
 - To prevent this we use `[routerLinkActiveOptions]="{exact: true}"`.
+
+## 06
+
+- Lets say if we want to navigate to some component which is not on currently loaded app after a certain complex operation through programatically. We could use ` this.router.navigate(['/servers'])`. Eg. Route to /servers after button click.
+
+* Unlike the routerLink, the navigate does not know on which route you are currently on.
+* You could also use relative path here, but we need to specify the path from which this route needs to be navigated to.
+* ActivatedRoute will give the currently loaded or Active route.
+* `this.router.navigate(['servers'],{relativeTo:this.route})`
