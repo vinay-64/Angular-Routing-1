@@ -19,4 +19,11 @@ export class HomeComponent implements OnInit {
 
     
   }
+  onLoadServers1(id:number){
+    //some complex operation. May be reaching out to server to store something etc.
+
+    this.router.navigate(['/servers',id,'edit'],{queryParams: {allowEdit:'1'},fragment:'loading'});
+
+    
+  }
 }

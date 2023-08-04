@@ -86,3 +86,11 @@ Main Routes have been configured and Registered with RouterModule and we have sp
   ![Alt text](image.png)
 
   **\* \*** When you go to another component and come again to the same component, Angular will destroy and re-create the component. But, It won't destroy any subscriptions, and therefore, it will stack into the memory. So, it is recommended to unsubscribe to it, whenever the component destroys using ngOnDestroy() method.
+
+## 09 - Passing Query Parameters and fragments in the url through url/link click/Programmatic Navigation and Retrieving them from the Loaded Component.
+
+- ![Alt text](image-3.png)
+
+- ![Alt text](image-2.png)
+
+- ![Alt text](image-1.png)
