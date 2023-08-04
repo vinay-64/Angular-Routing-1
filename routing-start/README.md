@@ -105,3 +105,8 @@ Main Routes have been configured and Registered with RouterModule and we have sp
 - Here we have seen, The query params that were present on server click, does not appear when we click Edit button on the ServerComponent to navigate to EditComponent. i.e query params are not passing down to the next request.
 
 * we can do that by using `this.router.navigate(['edit'],{relativeTo:this.route,queryParamsHandling:'preserve'});`
+
+## 12 - For all invalid paths we have added redirect to PageNotFound Component
+
+- `{path:'not-found',component: PageNotFoundComponent}`
+  `{path:'**', redirectTo:'not-found'}`
