@@ -45,3 +45,11 @@ Main Routes have been configured and Registered with RouterModule and we have sp
 
 - `<a routerLink="/servers">Reload Page</a>`
   This is an Absolute Path
+
+## 05
+
+- class active will defaultly make that link as active.
+- For this, router module provides routerLinkActive which holds active class which indicates make the currently clicked link as active `routerLinkActive="active"`
+- By default this will mark the links as active. i.e. it checks what are all links lead to the currently loaded route.
+- Therefore localhost:4200/servers/ here the loaded route has both empty and servers.
+- To prevent this we use `[routerLinkActiveOptions]="{exact: true}"`.
