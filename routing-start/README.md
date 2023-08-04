@@ -35,3 +35,12 @@ Main Routes have been configured and Registered with RouterModule and we have sp
 - It would be nice to navigate from with in the app instead of typing in the url bar.
 - For this we could have used href, but it's default behaviour is to send the request to the server. Because of this our page reloads and restarts, loosing our entire App state.
 - Angular offers us a routerLink which will prevent default behaviour and renders the component without reloading.
+
+## 04
+
+- <a routerLink="servers">Reload Page</a>
+  <a routerLink="./servers">Reload Page</a>
+  <a routerLink="../users">Reload Page</a>
+  These are relative Paths
+
+- <a routerLink="/servers">Reload Page</a> This is an Absolute Path
