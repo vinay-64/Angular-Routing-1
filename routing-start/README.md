@@ -62,3 +62,14 @@ Main Routes have been configured and Registered with RouterModule and we have sp
 * You could also use relative path here, but we need to specify the path from which this route needs to be navigated to.
 * ActivatedRoute will give the currently loaded or Active route.
 * `this.router.navigate(['servers'],{relativeTo:this.route})`
+
+## 07
+
+- We can add Parameter routes and dynamic segments in our paths.
+- Later we will be able to retrieve that parameter inside of the loaded component by that name.
+- The ActivatedRoute we injected will give access to the id passed in the url(here).
+
+* this.user={
+  id:this.route.snapshot.params['id'],
+  name:this.route.snapshot.params['name']
+  }
