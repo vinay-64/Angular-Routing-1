@@ -98,3 +98,10 @@ Main Routes have been configured and Registered with RouterModule and we have sp
 ## 10 - Child Routes is Implemented for servers and users
 
 - ![Alt text](image-4.png)
+
+## 11 - Configuring the Handling of Query Parameters i.e while navigating from the current component to sub level component, we can pass query params of the current component to the next component using `queryParamsHandling`.
+
+- Inside ServersComponent we have created a button in serverComponent, to navigate to the edit Component
+- Here we have seen, The query params that were present on server click, does not appear when we click Edit button on the ServerComponent to navigate to EditComponent. i.e query params are not passing down to the next request.
+
+* we can do that by using `this.router.navigate(['edit'],{relativeTo:this.route,queryParamsHandling:'preserve'});`
