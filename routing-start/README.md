@@ -73,3 +73,16 @@ Main Routes have been configured and Registered with RouterModule and we have sp
   id:this.route.snapshot.params['id'],
   name:this.route.snapshot.params['name']
   }
+
+## 08
+
+- If we want to navigate to the UserComponent from the UserComponent with different parameter values, the url gets changed, but we are already on the component which should get loaded. So Angular cleverly doesn't reinstantiate this component.
+- That only costs us performance. Why would it re-render the component we already are on ?
+
+* It won't recreate the whole component and destroy the old one if we already on that component. But If you still want updated data,we can use Observables.
+* This works heavily with Asynchronous tasks, here the route params might change at some point in the future, if the user clicks this link, you don't know when and how long it will take. So, therefore, you can't block this code and wait for this to happen here.
+* So, Observable is an easy way to subscribe to some event which might happen in the future, then execute some code when it happens without having to wait for it now. And that is what params is.
+
+  ![Alt text](image.png)
+
+  **\* \*** When you go to another component and come again to the same component, Angular will destroy and re-create the component. But, It won't destroy any subscriptions, and therefore, it will stack into the memory. So, it is recommended to unsubscribe to it, whenever the component destroys using ngOnDestroy() method.
