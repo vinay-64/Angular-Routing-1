@@ -28,7 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## 02
 
-Main Routes have been configured and Registered with RouterModule and we have specified the place to render currently selected path component using <router-outlet> directive.
+Main Routes have been configured and Registered with RouterModule and we have specified the place to render currently selected path component using `<router-outlet>` directive.
 
 ## 03
 
@@ -38,9 +38,10 @@ Main Routes have been configured and Registered with RouterModule and we have sp
 
 ## 04
 
-- <a routerLink="servers">Reload Page</a>
-  <a routerLink="./servers">Reload Page</a>
-  <a routerLink="../users">Reload Page</a>
-  These are relative Paths
+- `<a routerLink="servers">Reload Page</a>`
+  `<a routerLink="./servers">Reload Page</a>`
+  `<a routerLink="../users">Reload Page</a>`
+  These are relative Paths`
 
-- <a routerLink="/servers">Reload Page</a> This is an Absolute Path
+- `<a routerLink="/servers">Reload Page</a>`
+  This is an Absolute Path
