@@ -41,3 +41,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * While unsubscribing to the subscription, we are storing subscription from the subscribe function and not from observable.
 
 * For the observables provided by Angular like params but also any other observable you'll encounter throughout this course that is provided by a Angular package or by a feature provided by Angular. All these Angular observables are managed by Angular and therefore you don't need to unsubscribe manually here.
+
+## 03 - Building a new Custom Observable using Observable.create(Observer=>{})
+
+- The observer in the end is the part that is interested in being informed about new data, about errors, or about the observable being completed.
+
+* Now our job here is to tell the observer about new data, about an error, or about the observable being completed. Here, we're not responsible for listening because the observer is the listener. Here, we get that listening part as an argument and we need to tell it once we're done, once new data is there, and so on. So in this anonymous function
+
+![Alt text](image.png)
