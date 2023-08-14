@@ -59,3 +59,17 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * Completing can be a normal process in an observable. Now our interval by default doesn't complete. It will emit new values until the end of time. And HTTP request on the other hand, will complete. It completes whenever a response by the server is there. And of course here when we're building our own observable from the crowned up, we can also complete this manually.
 
 * When it cancels due to an error then that's a different thing than when it completes. An error cancels the observable. It does not complete it.
+
+* The idea is that you understand what happens inside of an observable. Whenever you subscribe, and you set-up your different handler functions here, our xjs in the end merges them all together into one object and passes that object, the observer, to the observable. And inside of the observable, it will then interact with the observer, and let the observer know about new data and errors and so on.
+
+## 05 - Pipe of Operators for Tranforming and filtering and so on.
+
+- Operators are the magic feature of the RxJS library and they are the thing that really turn observables into awesome constructs.
+
+- If we have an observable and an observer we of course get data and we listen to that with a subscription. That is what you learn. Now, however, sometimes you don't need the raw data. You might want to transform it or filter out certain data points and of course you could do all of that inside of your subscription or in the function you pass to your subscription. But there is a more elegant way.
+
+- Instead of setting up that subscription like this you can use builtin operators in between. That means that the data points, first of all reach these operators that do something to the data and that something can be anything. There are tons of builtin operators and then you subscribe to the result of these operators.
+
+- What if we have complex transform operation, Instead of doing it in the subscribe function. We can subscribe to the transformed values. We even cannot transform in the observable, because often times we are not owning the observable like params.
+
+- with pipe, we can add one or more operators. If you have more than one you'll simply add them as arguments here to the pipe method. So the pipe method takes an unlimited amount of arguments and each argument would be an operator imported from RxJS operators and you can add as many as you want and they will execute after each other and do different kinds of stuff on the data. This is map of course, for example, you could also filter.
