@@ -49,3 +49,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * Now our job here is to tell the observer about new data, about an error, or about the observable being completed. Here, we're not responsible for listening because the observer is the listener. Here, we get that listening part as an argument and we need to tell it once we're done, once new data is there, and so on. So in this anonymous function
 
 ![Alt text](image.png)
+
+## 04 - Implemented error() and complete() methods on Custom Observable.
+
+- whenever an observable throws an error, it cancels, it's done. It will not emit any error values, it dies so to say. And therefore in that case you also don't need to unsubscribe. You still can unsubscribe. If you never get away, you'll not get an error. But it's not necessary because, well, it was dead anyways but you might not have known that when you unsubscribe. So unsubscribing is not an issue.
+
+- Now we get our alert and you see we don't have that red error here on the right anymore. Instead it's now a regular console log because that's what we're doing. So now we're handling that error and that of course is also an important part. Now handling errors is nice
+
+* Completing can be a normal process in an observable. Now our interval by default doesn't complete. It will emit new values until the end of time. And HTTP request on the other hand, will complete. It completes whenever a response by the server is there. And of course here when we're building our own observable from the crowned up, we can also complete this manually.
+
+* When it cancels due to an error then that's a different thing than when it completes. An error cancels the observable. It does not complete it.
