@@ -8,15 +8,14 @@ export class ServersService {
     {
       id: 2,
       name: 'Testserver',
-      status: 'offline'
+      status: 'offline123'
     },
     {
       id: 3,
-      name: 'Devserver',
-      status: 'offline'
+      name: 'Devserver123',
+      status: 'offline123'
     }
   ];
-
   getServers() {
     return this.servers;
   }
