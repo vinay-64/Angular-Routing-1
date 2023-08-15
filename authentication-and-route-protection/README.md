@@ -27,3 +27,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 ## 01 - Basic Form is Setup with Login and Logout Templates
+
+## 02 - Updated Firebase Rules to get Data only if they are authenticated. We have used Email & Password mechanism in Firebase for creating and logging users into Firebase Backend.
