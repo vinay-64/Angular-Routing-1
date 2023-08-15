@@ -29,3 +29,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## 01 - Basic Form is Setup with Login and Logout Templates
 
 ## 02 - Updated Firebase Rules to get Data only if they are authenticated. We have used Email & Password mechanism in Firebase for creating and logging users into Firebase Backend.
+
+## 03 - Implementing SignUp Request
+
+- Here we are using the Sign In and Sign Up Apis provided by the Firebase to create a new user and Loggin existing user.
+  https://firebase.google.com/docs/reference/rest/auth#section-create-email-password
+- SignUp Api has been coded and it will give a reponse with tokens
