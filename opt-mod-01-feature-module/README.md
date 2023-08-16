@@ -47,3 +47,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * whatever you use in the template of these components has to be imported in that module. It's not enough if you import it in the app module. The only exception to the rule are services. These only need to be set up once in the app module and you can access them in your whole application even in components which you added to feature modules. Anything that's used in a template, components, directives, pipes, these things need to be declared or imported into the module where you plan on using them. It's not enough to use them in another module even if you export your things to that other module.
 
 ## 02 - Outsourcing routes related to Recipes from App-routing module to Recipe-routing-module.
+
+- it's really important to understand that you don't just add to declarations what you plan on using in a template, but you also have to add any routes here that you load via routing.
+
+* There is no reason to still export all these recipe components because we're now only using them internally in the recipes module.
+
+* So there is no reason to export the recipe components anymore because we're not using these recipe components in the app component or any child component of the app component.
