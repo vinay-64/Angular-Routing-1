@@ -53,3 +53,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * There is no reason to still export all these recipe components because we're now only using them internally in the recipes module.
 
 * So there is no reason to export the recipe components anymore because we're not using these recipe components in the app component or any child component of the app component.
+
+## 03 - Added another Module for Shopping Feature.
