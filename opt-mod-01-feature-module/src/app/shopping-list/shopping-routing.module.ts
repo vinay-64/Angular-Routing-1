@@ -8,7 +8,7 @@ const routes=[
 
 @NgModule({
     imports:[RouterModule.forChild(routes),RouterModule],
-    exports: [RouterModule]
+    // exports: [RouterModule]
 })
 export class ShoppingRoutingModule{
 

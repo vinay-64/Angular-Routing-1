@@ -55,3 +55,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * So there is no reason to export the recipe components anymore because we're not using these recipe components in the app component or any child component of the app component.
 
 ## 03 - Added another Module for Shopping Feature.
+
+## 04 - Shared Modules
+
+- Whenever there are many duplicated components across different modules, we can separate them into a shared module and import it in other modules which use this.
+- the idea here is that you still now declare and import anything into this module that might be used by other modules, but since every module works standalone, to then also make these things available in other modules, you will also export all these things which you're importing.
+
+* the idea is that wherever we import the shared module, we have access to all these features which we initialize here. So, in other modules, where we want to use one or all of these features, we don't have to add them to their modules, we just import the shared module and we got access because we're exporting all these stuff. If we wouldn't export it, we would not have access.
+* if we would use the alert component here, or the placeholder directive, or the dropdown directive, then we would gain much more from that because now we don't have to add all of that to declarations here. We just bring in the shared module and we got access to all the things declared in the shared module and exported there.
+
+* If you declare the shopping list component here, in the shopping list module, you must not declare it anywhere else. Even if you need it in another module, you must not declare it there. The solution then, instead, is to export it here and import that module into another module and that's exactly what we're doing with the shared module.
+
+* You can only define, or declare, components, directives and pipes once. You can't do that multiple times. You can import a module into multiple imports. So, it is fine if we import the router module here in the recipes module and also in the shopping list module. Imports are okay, but declarations are not.

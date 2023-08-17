@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+PRODID:-//Events Calendar//iCal4j 1.0//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTAMP:20230817T064902Z
+DTSTART:20230817T103000Z
+DTEND:20230817T111500Z
+SUMMARY:Zoom Interview Confirmation for Software Engineer with ServiceNow
+  @ Aug 17\, 2023\, 4:00:00 PM - 4:45:00 PM (GMT+5:30)
+UID:27a1303d-655a-42a1-864b-70e92cd93c4c
+LOCATION:Salarpuria Sattva Knowledge City Parcel 3\, Survey No. 83/1\, 7t
+ h & 8th Floor\, Phase 1 Inorbit Mall Road\, Raidurg village\, Hyderabad\
+ , India
+ORGANIZER;ROLE=NON-PARTICIPANT;CN=Suman Yarlapalli:mailto:efcee126-d34f-4
+ 00c-b70c-7ca5069df305@eu.calendar.smartrecruiters.com
+ATTENDEE;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;ROLE=REQ-PARTICIPANT;CN=Vardhi V
+ inay Kumar:mailto:vardhivinaykumar@gmail.com
+SEQUENCE:0
+CLASS:PUBLIC
+DESCRIPTION:Scheduled interview between ServiceNow and Vardhi Vinay Kumar
+ \, candidate for Software Engineer\n\n4:00 PM - 4:45 PM (Chennai\, Kolka
+ ta\, Mumbai\, New Delhi) Ashfaque Ahmed Mohammed\n\n\n\n
+END:VEVENT
+END:VCALENDAR
