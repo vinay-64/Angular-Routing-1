@@ -67,3 +67,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * If you declare the shopping list component here, in the shopping list module, you must not declare it anywhere else. Even if you need it in another module, you must not declare it there. The solution then, instead, is to export it here and import that module into another module and that's exactly what we're doing with the shared module.
 
 * You can only define, or declare, components, directives and pipes once. You can't do that multiple times. You can import a module into multiple imports. So, it is fine if we import the router module here in the recipes module and also in the shopping list module. Imports are okay, but declarations are not.
+
+## 05 - Core Module
+
+- you don't need to export your services because services work differently than declarations. Only declarations and other modules need to be exported. Services are automatically injected on a root level, you don't need to export them to make this happen. So services are simply an exception.
+
+* But as I mentioned, A, Core Module is optional, and B, this is only required if you provide a service here instead of providing it through @Injectable, which would be my recommendation to use whenever possible.
+
+* So what's the CoreModule? The CoreModule is basically there to make the AppModule a bit leaner. Let's say in the AppModule we have the AppComponent, and here we are providing two services. Well then we can use a CoreModule to move these services out of the AppModule into the CoreModule, which then in turn, is added back to the AppModule.
